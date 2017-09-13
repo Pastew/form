@@ -32,7 +32,7 @@ public class Collectable : MonoBehaviour {
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 GetComponent<AudioSource>().Play();
             }
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject);
         }
         else
             print(other.gameObject.tag);
