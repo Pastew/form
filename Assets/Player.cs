@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour {
 
     AudioSource audioSource;
     public AudioClip[] dieClips;
+    public AudioClip[] jumpClips;
 
     void Start () {
         audioSource = GetComponent<AudioSource>();
@@ -22,6 +24,12 @@ public class Player : MonoBehaviour {
         GetComponent<JelloBody>().SetPositionAngleAll(position, 0, true, true);
     }
 
+    internal void Jump(float jumpForce)
+    {
+        GetComponent<JelloBody>().AddImpulse(new Vector2(0, 1) * jumpForce);
+        PlayRandomSound(jumpClips);
+    }
+
     internal void Die()
     {
         if (!dying)
@@ -31,8 +39,7 @@ public class Player : MonoBehaviour {
     IEnumerator DieCoroutine()
     {
         dying = true;
-        int index = Random.Range(0, dieClips.Length);
-        audioSource.PlayOneShot(dieClips[index]);
+        PlayRandomSound(dieClips);
 
         AudioSource musicAudioSource = FindObjectOfType<Music>().GetComponent<AudioSource>();
         //GetComponent<JelloBody>().IsKinematic = true;
@@ -72,4 +79,9 @@ public class Player : MonoBehaviour {
         dying = false;
     }
 
+    private void PlayRandomSound(AudioClip[] clips)
+    {
+        int index = UnityEngine.Random.Range(0, clips.Length);
+        audioSource.PlayOneShot(clips[index]);
+    }
 }

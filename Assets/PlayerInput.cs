@@ -29,7 +29,7 @@ public class PlayerInput : MonoBehaviour
 
     private Vector3 startPosition;
 
-
+    private Player player;
     // World-tilt steering
 
     public bool worlTiltSteering = false;
@@ -46,7 +46,7 @@ public class PlayerInput : MonoBehaviour
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player = FindObjectOfType<Player>();
         body = player.GetComponent<JelloBody>();
 
         initialPhysics2DGravityY = Physics2D.gravity.y;
@@ -59,7 +59,7 @@ public class PlayerInput : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             //body.AddForce(new Vector2(0, 1) * jumpForce);
-            body.AddImpulse(new Vector2(0, 1) * jumpForce);
+            player.Jump(jumpForce);
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
