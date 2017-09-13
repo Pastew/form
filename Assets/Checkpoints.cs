@@ -23,7 +23,6 @@ public class Checkpoints : MonoBehaviour {
     public void ResetToLastCheckpoint()
     {
         print("Dead. I will move player to checkpoint: " + (currentCheckpoint-1));
-        print("I will move player to  " + checkpoints[currentCheckpoint - 1].transform.position);
         FindObjectOfType<Player>().TeleportToPosition(checkpoints[currentCheckpoint-1].transform.position);
     }
 }
