@@ -32,6 +32,9 @@ public class PostProcessingEffects : MonoBehaviour {
         bloomSettings = profile.bloom.settings;
         vignetteSettings = profile.vignette.settings;
         grainSettings = profile.grain.settings;
+
+        ResetGrain();
+        ResetVignette();
     }
 
 
@@ -91,7 +94,7 @@ public class PostProcessingEffects : MonoBehaviour {
 
         for (float i = 0; i < pauseBetween; i += Time.deltaTime)
         {
-            vignetteSettings.intensity += Random.Range(-0.01f,0.01f);
+            vignetteSettings.intensity += Random.Range(-0.01f, 0.01f);
             profile.vignette.settings = vignetteSettings;
 
 
@@ -118,15 +121,24 @@ public class PostProcessingEffects : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
 
+        ResetGrain();
+        ResetVignette();
+    }
+
+    private void ResetGrain()
+    {
         grainSettings.intensity = 0;
         grainSettings.luminanceContribution = 0;
         grainSettings.size = 0;
         grainSettings.colored = false;
         profile.grain.settings = grainSettings;
-
-        vignetteSettings.intensity = 0;
-        profile.vignette.settings = vignetteSettings;
-
     }
 
+    private void ResetVignette()
+    {
+        vignetteSettings.intensity = 0;
+        profile.vignette.settings = vignetteSettings;
+    }
+
+    
 }
