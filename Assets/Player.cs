@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +6,12 @@ public class Player : MonoBehaviour {
 
     private bool dying = false;
 
+    AudioSource audioSource;
+    public AudioClip[] dieClips;
+
     void Start () {
-		
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	void Update () {
 		
@@ -29,7 +31,9 @@ public class Player : MonoBehaviour {
     IEnumerator DieCoroutine()
     {
         dying = true;
-        print("asdas");
+        int index = Random.Range(0, dieClips.Length);
+        audioSource.PlayOneShot(dieClips[index]);
+
         //GetComponent<JelloBody>().IsKinematic = true;
         FindObjectOfType<PostProcessingEffects>().VignetteBoom();
         StickyDemoCamera cam = Camera.main.GetComponent<StickyDemoCamera>();
@@ -41,14 +45,17 @@ public class Player : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
         }
+
         FindObjectOfType<Checkpoints>().ResetToLastCheckpoint();
-        for (float t = 0; t < 3; t += Time.deltaTime)
+        GetComponent<JelloBody>().IsKinematic = true;
+
+        for (float t = 0; t < 5; t += Time.deltaTime)
         {
             yield return new WaitForEndOfFrame();
         }
 
         cam.followSpeed = camSpeed;
-        //GetComponent<JelloBody>().IsKinematic = false;
+        GetComponent<JelloBody>().IsKinematic = false;
         dying = false;
     }
 
