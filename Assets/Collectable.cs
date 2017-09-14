@@ -20,7 +20,7 @@ public class Collectable : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.GetComponent<JelloBody>())
         {
             Camera.main.GetComponent<StickyDemoCamera>().Shake();
 
