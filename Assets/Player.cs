@@ -23,6 +23,8 @@ public class Player : MonoBehaviour {
             if (pf.gameObject.activeSelf)
                 playerForm = pf;
         }
+
+        Camera.main.GetComponent<StickyDemoCamera>().target = playerForm.transform;
     }
 
     internal void Jump(float jumpForce)

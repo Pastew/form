@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GummyForm : PlayerForm {
+public class StoneForm : PlayerForm {
 
-    private JelloBody body;
+    private Rigidbody2D body;
 
     private void Start()
     {
-        body = GetComponent<JelloBody>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     internal override void Jump(float jumpForce)
     {
-        body.AddImpulse(new Vector2(0, 1) * jumpForce);
+        body.AddForce(new Vector2(0, 1) * jumpForce, ForceMode2D.Impulse);
     }
 
     internal override void Move(float horizontal, float maxSpeed, float rollForce, float moveForce)
@@ -29,21 +29,24 @@ public class GummyForm : PlayerForm {
 
     internal override void Turbo(float turboPower)
     {
-        body.AddImpulse(body.velocity.normalized * turboPower);
+        body.AddForce(body.velocity.normalized * turboPower, ForceMode2D.Impulse);
     }
 
     internal override void Stomp(float stompPower)
     {
-        body.AddImpulse(Vector2.down * stompPower);
+        body.AddForce(Vector2.down * stompPower, ForceMode2D.Impulse);
     }
 
     internal override void TeleportToPosition(Vector3 position)
     {
-        body.SetPositionAngleAll(position, 0, true, true);
+        transform.position = position;
+        body.velocity = new Vector3(0f, 0f, 0f);
+        body.angularVelocity = 0;
+        body.rotation = 0;
     }
 
     internal override void FreezePosition(bool freeze)
     {
-        body.IsKinematic = freeze;
+        body.isKinematic = freeze;
     }
 }
