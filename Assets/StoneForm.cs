@@ -11,12 +11,12 @@ public class StoneForm : PlayerForm {
         body = GetComponent<Rigidbody2D>();
     }
 
-    internal override void Jump(float jumpForce)
+    internal override void Jump()
     {
         body.AddForce(new Vector2(0, 1) * jumpForce, ForceMode2D.Impulse);
     }
 
-    internal override void Move(float horizontal, float maxSpeed, float rollForce, float moveForce)
+    internal override void Move(float horizontal)
     {
         if (Mathf.Abs(body.velocity.x) < maxSpeed)
         {
@@ -27,12 +27,12 @@ public class StoneForm : PlayerForm {
         }
     }
 
-    internal override void Turbo(float turboPower)
+    internal override void Turbo()
     {
         body.AddForce(body.velocity.normalized * turboPower, ForceMode2D.Impulse);
     }
 
-    internal override void Stomp(float stompPower)
+    internal override void Stomp()
     {
         body.AddForce(Vector2.down * stompPower, ForceMode2D.Impulse);
     }

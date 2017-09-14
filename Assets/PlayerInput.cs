@@ -6,24 +6,6 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerInput : MonoBehaviour
 {
-    [Range(500,4000)]
-    public int moveForce = 1000;
-
-    [Range(500, 4000)]
-    public int rollForce = 1200;
-
-    [Range(0, 1000)]
-    public int jumpForce = 600;
-
-    [Range(10, 300000)]
-    public float maxSpeed = 30f;
-
-    [Range(50, 500)]
-    public float stompPower = 100f;
-
-    [Range(50, 500)]
-    public float turboPower = 100f;
-
     private Vector3 startPosition;
     private Player player;
     private float initialPhysics2DGravityY;
@@ -41,21 +23,21 @@ public class PlayerInput : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
-            player.Jump(jumpForce);
+            player.Jump();
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
-            player.Stomp(stompPower);
+            player.Stomp();
         }
 
         if (CrossPlatformInputManager.GetButtonDown("Fire2"))
         {
-            player.Turbo(turboPower);
+            player.Turbo();
         }
 
         float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-        player.Move(horizontal, maxSpeed, rollForce, moveForce);
+        player.Move(horizontal);
        
         if (Input.GetKeyDown(KeyCode.R))
         {

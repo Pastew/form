@@ -27,28 +27,28 @@ public class Player : MonoBehaviour {
         Camera.main.GetComponent<StickyDemoCamera>().target = playerForm.transform;
     }
 
-    internal void Jump(float jumpForce)
+    internal void Jump()
     {
-        playerForm.Jump(jumpForce);
+        playerForm.Jump();
         PlayRandomSound(playerForm.jumpClips);
     }
 
-    internal void Move(float horizontal, float maxSpeed, float rollForce, float moveForce)
+    internal void Move(float horizontal)
     {
-        playerForm.Move(horizontal, maxSpeed, rollForce, moveForce);
+        playerForm.Move(horizontal);
     }
 
-    internal void Turbo(float turboPower)
+    internal void Turbo( )
     {
         print("Turbo");
-        playerForm.Turbo(turboPower);
+        playerForm.Turbo();
         postProcessingManager.BloomBoom();
     }
 
-    internal void Stomp(float stompPower)
+    internal void Stomp( )
     {
         print("Stomp");
-        playerForm.Stomp(stompPower);
+        playerForm.Stomp();
         postProcessingManager.BloomBoom();
     }
 

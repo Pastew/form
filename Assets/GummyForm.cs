@@ -11,12 +11,12 @@ public class GummyForm : PlayerForm {
         body = GetComponent<JelloBody>();
     }
 
-    internal override void Jump(float jumpForce)
+    internal override void Jump()
     {
         body.AddImpulse(new Vector2(0, 1) * jumpForce);
     }
 
-    internal override void Move(float horizontal, float maxSpeed, float rollForce, float moveForce)
+    internal override void Move(float horizontal)
     {
         if (Mathf.Abs(body.velocity.x) < maxSpeed)
         {
@@ -27,12 +27,12 @@ public class GummyForm : PlayerForm {
         }
     }
 
-    internal override void Turbo(float turboPower)
+    internal override void Turbo()
     {
         body.AddImpulse(body.velocity.normalized * turboPower);
     }
 
-    internal override void Stomp(float stompPower)
+    internal override void Stomp()
     {
         body.AddImpulse(Vector2.down * stompPower);
     }

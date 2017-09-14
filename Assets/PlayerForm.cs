@@ -4,25 +4,36 @@ using UnityEngine;
 
 public abstract class PlayerForm : MonoBehaviour {
 
-    public AudioClip[] jumpClips;
-    public AudioClip[] dieClips;
+    [Range(500, 4000)]
+    [SerializeField] protected int moveForce = 1000;
 
-    internal abstract void Jump(float jumpForce);
-    internal abstract void Move(float horizontal, float maxSpeed, float rollForce, float moveForce);
+    [Range(500, 4000)]
+    [SerializeField] protected int rollForce = 1900;
+
+    [Range(0, 100)]
+    [SerializeField]
+    protected int jumpForce = 35;
+
+    [Range(10, 300000)]
+    [SerializeField]
+    protected float maxSpeed = 10000f;
+
+    [Range(50, 500)]
+    [SerializeField]
+    protected float stompPower = 75f;
+
+    [Range(50, 500)]
+    [SerializeField]
+    public float turboPower = 50f;
+
+    [SerializeField] public AudioClip[] jumpClips;
+    [SerializeField] public AudioClip[] dieClips;
+
+    internal abstract void Jump();
+    internal abstract void Move(float horizontal);
     internal abstract void TeleportToPosition(Vector3 position);
-
-    /// <summary>
-    /// Rush forward (rush parallel to velocity vector)
-    /// </summary>
-    /// <param name="turboPower"></param>
-    /// 
-    internal abstract void Turbo(float turboPower);
-
-    /// <summary>
-    /// Rush downwards
-    /// </summary>
-    /// <param name="stompPower"></param>
-    internal abstract void Stomp(float stompPower);
+    internal abstract void Turbo();
+    internal abstract void Stomp();
 
     /// <summary>
     /// This method will freeze/unfreeze player in place

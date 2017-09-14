@@ -11942,7 +11942,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 967689278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 104.1, y: -28.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 983438773}
@@ -12969,6 +12969,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b22267a3ad794940ab0d5302852843b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 1000
+  rollForce: 1900
+  jumpForce: 35
+  maxSpeed: 1000
+  stompPower: 75
+  turboPower: 50
   jumpClips:
   - {fileID: 8300000, guid: a2821e2dd1b31254daef9f64cd1a764d, type: 3}
   dieClips:
@@ -25177,12 +25183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f45b7a9ef1d5c9409129f37bb4af819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 1000
-  rollForce: 1860
-  jumpForce: 35
-  maxSpeed: 90139
-  stompPower: 75
-  turboPower: 50
 --- !u!4 &1427481835
 Transform:
   m_ObjectHideFlags: 0
@@ -25358,7 +25358,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 053e324068943084288149c6b8432d4c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -25371,7 +25371,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1504402118}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 053e324068943084288149c6b8432d4c, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -25389,6 +25389,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9568f29dfb505e449070b503bc2b2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveForce: 1000
+  rollForce: 1000
+  jumpForce: 20
+  maxSpeed: 30
+  stompPower: 130
+  turboPower: 50
   jumpClips:
   - {fileID: 8300000, guid: a2821e2dd1b31254daef9f64cd1a764d, type: 3}
   dieClips:
