@@ -6,58 +6,53 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     private bool dying = false;
-
-    private JelloBody jelloBody;
+ 
     private PostProcessingEffects postProcessingManager;
     AudioSource audioSource;
-    public AudioClip[] dieClips;
-    public AudioClip[] jumpClips;
+
+    PlayerForm[] playerForms;
+    private PlayerForm playerForm;
 
     void Start () {
         audioSource = GetComponent<AudioSource>();
-        jelloBody = GetComponentInChildren<JelloBody>();
         postProcessingManager = FindObjectOfType<PostProcessingEffects>();
 
-    }
-
-    void Update () {
-		
-	}
-
-    internal void TeleportToPosition(Vector3 position)
-    {
-        jelloBody.SetPositionAngleAll(position, 0, true, true);
+        playerForms = GetComponentsInChildren<PlayerForm>();
+        foreach (PlayerForm pf in playerForms)
+        {
+            if (pf.gameObject.activeSelf)
+                playerForm = pf;
+        }
     }
 
     internal void Jump(float jumpForce)
     {
-        jelloBody.AddImpulse(new Vector2(0, 1) * jumpForce);
-        PlayRandomSound(jumpClips);
+        playerForm.Jump(jumpForce);
+        PlayRandomSound(playerForm.jumpClips);
     }
 
     internal void Move(float horizontal, float maxSpeed, float rollForce, float moveForce)
     {
-        if (Mathf.Abs(jelloBody.velocity.x) < maxSpeed)
-        {
-            jelloBody.AddTorque(-horizontal * rollForce * Time.deltaTime);
-            //body.AddForce(new Vector2(Input.GetAxis("Horizontal") * moveForce * Time.deltaTime, 0));
-            float force = horizontal * moveForce * Time.deltaTime;
-            jelloBody.AddForce(new Vector2(force, 0));
-        }
+        playerForm.Move(horizontal, maxSpeed, rollForce, moveForce);
     }
 
     internal void Turbo(float turboPower)
     {
         print("Turbo");
-        jelloBody.AddImpulse(jelloBody.velocity.normalized * turboPower);
+        playerForm.Turbo(turboPower);
         postProcessingManager.BloomBoom();
     }
 
     internal void Stomp(float stompPower)
     {
         print("Stomp");
-        jelloBody.AddImpulse(Vector2.down * stompPower);
+        playerForm.Stomp(stompPower);
         postProcessingManager.BloomBoom();
+    }
+
+    internal void TeleportToPosition(Vector3 position)
+    {
+        playerForm.TeleportToPosition(position);
     }
 
     internal void Die()
@@ -69,7 +64,7 @@ public class Player : MonoBehaviour {
     IEnumerator DieCoroutine()
     {
         dying = true;
-        PlayRandomSound(dieClips);
+        PlayRandomSound(playerForm.dieClips);
 
         AudioSource musicAudioSource = FindObjectOfType<Music>().GetComponent<AudioSource>();
         //GetComponent<JelloBody>().IsKinematic = true;
@@ -91,7 +86,7 @@ public class Player : MonoBehaviour {
         }
 
         FindObjectOfType<Checkpoints>().ResetToLastCheckpoint();
-        jelloBody.IsKinematic = true;
+        playerForm.FreezePosition(true);
 
         for (float t = 0; t < 3; t += Time.deltaTime)
         {
@@ -105,18 +100,14 @@ public class Player : MonoBehaviour {
         }
         musicAudioSource.pitch = 1;
         cam.followSpeed = camSpeed;
-        GetComponent<JelloBody>().IsKinematic = false;
+        playerForm.FreezePosition(false);
         dying = false;
     }
-
- 
 
     internal Vector3 GetPosition()
     {
         return transform.position;
     }
-
-
 
     private void PlayRandomSound(AudioClip[] clips)
     {
