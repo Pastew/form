@@ -8,6 +8,12 @@ public class Player : MonoBehaviour {
     private bool dying = false;
  
     private PostProcessingEffects postProcessingManager;
+
+    internal Transform GetPlayerTransform()
+    {
+        return playerForm.transform;
+    }
+
     AudioSource audioSource;
 
     PlayerForm[] playerForms;
