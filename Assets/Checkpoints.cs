@@ -8,27 +8,26 @@ public class Checkpoints : MonoBehaviour {
 
     private Vector3 playerStartingPosition;
 
-    Checkpoint[] checkpoints;
-    int currentCheckpoint = 0;
+    List<Checkpoint> checkpoints;
+    Checkpoint lastReachedCheckpoint = null;
 
 	void Start () {
-        checkpoints = GetComponentsInChildren<Checkpoint>();
+        checkpoints = GetComponentsInChildren<Checkpoint>().ToList<Checkpoint>();
         playerStartingPosition = FindObjectOfType<Player>().transform.position;
     }
 
-    internal void ActivateNextCheckpoint()
+    internal void ActivateNextCheckpoint(Checkpoint checkpoint)
     {
-        print("Checkpoint reached: " + currentCheckpoint);
-        currentCheckpoint++;
-        print("Next checkpoint: " + currentCheckpoint);
+        print("Checkpoint reached: " + checkpoint.name);
+        lastReachedCheckpoint = checkpoint;
     }
 
     public void ResetToLastCheckpoint()
     {
-        if (currentCheckpoint > 0)
+        if (lastReachedCheckpoint != null)
         {
-            print("Dead. I will move player to checkpoint: " + (currentCheckpoint - 1));
-            FindObjectOfType<Player>().TeleportToPosition(checkpoints[currentCheckpoint - 1].transform.position);
+            print("Dead. I will move player to checkpoint: " + (lastReachedCheckpoint.name));
+            FindObjectOfType<Player>().TeleportToPosition(lastReachedCheckpoint.transform.position);
         }
         else
         {

@@ -7,7 +7,7 @@ public class Checkpoint : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GetComponentInParent<Checkpoints>().ActivateNextCheckpoint();
+        GetComponentInParent<Checkpoints>().ActivateNextCheckpoint(this);
         GetComponent<ParticleSystem>().Stop();
         GetComponent<CircleCollider2D>().enabled = false;
         GetComponent<AudioSource>().Play();
