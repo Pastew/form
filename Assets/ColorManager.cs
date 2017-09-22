@@ -18,11 +18,12 @@ public class ColorManager : MonoBehaviour {
     public Color endCamBackgroundColor = Color.white;
 
     private Camera cam;
-    private bool direction = true;    
+    private bool direction = false;    
 
     void Start () {
-        cam = Camera.main;	
-	}
+        cam = Camera.main;
+        SwitchColorsSlowly();
+    }
 	
 	void Update () {
         if (Input.GetKeyDown(KeyCode.I))

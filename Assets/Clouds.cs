@@ -50,6 +50,7 @@ public class Clouds : MonoBehaviour {
         newCloud.AddComponent<CircleCollider2D>().isTrigger = true;
         newCloud.AddComponent<Rigidbody2D>().isKinematic = true;
 
+        newCloud.transform.localScale *= UnityEngine.Random.Range(1.0f, 2);
         newCloud.transform.parent = transform;
         newCloud.transform.position = new Vector2(transform.position.x + x, transform.position.y + UnityEngine.Random.Range(minY, maxY));
     }
