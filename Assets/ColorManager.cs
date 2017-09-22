@@ -5,14 +5,20 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour {
 
-    public float transitionLength = 1;
+    public float transitionLength = 0.3f;
     public Material fillMaterial;
     public Material edgeMaterial;
 
-    private Camera cam;
+    public Color startFillColor = Color.white;
+    public Color startEdgeColor = Color.white;
+    public Color startCamBackgroundColor = Color.black;
 
-    private bool blackAndWhite = true;
-    
+    public Color endFillColor = Color.black;
+    public Color endEdgeColor = Color.black;
+    public Color endCamBackgroundColor = Color.white;
+
+    private Camera cam;
+    private bool direction = true;    
 
     void Start () {
         cam = Camera.main;	
@@ -28,47 +34,25 @@ public class ColorManager : MonoBehaviour {
         StartCoroutine(SwichColorCoroutine());
     }
 
-    public void SwitchColorsInstant()
-    {
-        print("SwitchColorsInstant");
-        if (blackAndWhite)
-        {
-            fillMaterial.color = Color.black;
-            edgeMaterial.color = Color.black;
-            cam.backgroundColor = Color.white;
-        }
-        else
-        {
-
-            fillMaterial.color = Color.white;
-            edgeMaterial.color = Color.white;
-            cam.backgroundColor = Color.black;
-        }
-
-        blackAndWhite = !blackAndWhite;
-    }
-
     IEnumerator SwichColorCoroutine()
     {
-        print("SwichColorCoroutine");
-        
         for (float elapsedTime = 0; elapsedTime < transitionLength; elapsedTime += Time.deltaTime)
         {
-            if (blackAndWhite)
+            if (direction)
             {
-                fillMaterial.color = Color.Lerp(Color.white, Color.black, elapsedTime / transitionLength);
-                edgeMaterial.color = Color.Lerp(Color.white, Color.black, elapsedTime / transitionLength);
-                cam.backgroundColor = Color.Lerp(Color.black, Color.white, elapsedTime / transitionLength);
+                fillMaterial.color = Color.Lerp(startFillColor, endFillColor, elapsedTime / transitionLength);
+                edgeMaterial.color = Color.Lerp(startEdgeColor, endEdgeColor, elapsedTime / transitionLength);
+                cam.backgroundColor = Color.Lerp(startCamBackgroundColor, endCamBackgroundColor, elapsedTime / transitionLength);
             }
             else
             {
-                fillMaterial.color = Color.Lerp(Color.black, Color.white, elapsedTime / transitionLength);
-                edgeMaterial.color = Color.Lerp(Color.black, Color.white, elapsedTime / transitionLength);
-                cam.backgroundColor = Color.Lerp(Color.white, Color.black, elapsedTime / transitionLength);
+                fillMaterial.color = Color.Lerp(endFillColor, startFillColor, elapsedTime / transitionLength);
+                edgeMaterial.color = Color.Lerp(endEdgeColor, startEdgeColor, elapsedTime / transitionLength);
+                cam.backgroundColor = Color.Lerp(endCamBackgroundColor, startCamBackgroundColor, elapsedTime / transitionLength);
             }
 
             yield return new WaitForEndOfFrame();
         }
-        blackAndWhite = !blackAndWhite;
+        direction = !direction;
     }
 }
