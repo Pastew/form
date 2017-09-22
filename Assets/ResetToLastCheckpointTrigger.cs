@@ -6,6 +6,7 @@ public class ResetToLastCheckpointTrigger : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<Player>().Die();
+        if (collision.CompareTag("Player"))
+            FindObjectOfType<Player>().Die();
     }
 }
