@@ -7,6 +7,9 @@ public class Checkpoint : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.CompareTag("Player"))
+            return;
+
         GetComponentInParent<Checkpoints>().ActivateNextCheckpoint(this);
         GetComponent<ParticleSystem>().Stop();
         GetComponent<CircleCollider2D>().enabled = false;
