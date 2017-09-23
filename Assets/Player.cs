@@ -27,6 +27,11 @@ public class Player : MonoBehaviour {
         Camera.main.GetComponent<MyCamera>().target = playerForm.transform;
     }
 
+    internal void JumpEnd()
+    {
+        playerForm.JumpEnd();
+    }
+
     internal void Jump()
     {
         playerForm.Jump();

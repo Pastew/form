@@ -26,6 +26,11 @@ public class PlayerInput : MonoBehaviour
             player.Jump();
         }
 
+        if (CrossPlatformInputManager.GetButtonUp("Jump"))
+        {
+            player.JumpEnd();
+        }
+
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
             player.Stomp();

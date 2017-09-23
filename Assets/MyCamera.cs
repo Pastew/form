@@ -64,7 +64,6 @@ public class MyCamera : MonoBehaviour {
         {
             Vector3 newPosition = target.position;
             newPosition.z = targetZ;
-            print(newPosition);
             transform.position = Vector3.Slerp(transform.position, newPosition, followSpeed );
         }
     }

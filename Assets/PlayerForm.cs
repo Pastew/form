@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class PlayerForm : MonoBehaviour {
 
-    [Range(500, 4000)]
+    [Range(100, 4000)]
     [SerializeField] protected int moveForce = 1000;
 
     [Range(500, 4000)]
@@ -14,7 +15,7 @@ public abstract class PlayerForm : MonoBehaviour {
     [SerializeField]
     protected int jumpForce = 35;
 
-    [Range(10, 300000)]
+    [Range(1, 300000)]
     [SerializeField]
     protected float maxSpeed = 10000f;
 
@@ -32,6 +33,12 @@ public abstract class PlayerForm : MonoBehaviour {
     internal abstract void Jump();
     internal abstract void Move(float horizontal);
     internal abstract void TeleportToPosition(Vector3 position);
+
+    internal virtual void JumpEnd()
+    {
+        // It's not abstract because not all forms will need this method
+    }
+
     internal abstract void Turbo();
     internal abstract void Stomp();
 
