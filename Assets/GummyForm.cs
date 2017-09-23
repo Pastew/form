@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,19 @@ public class GummyForm : PlayerForm {
 
     internal override void Jump()
     {
-        body.AddImpulse(new Vector2(0, 1) * jumpForce);
+        if (IsGrounded())
+        {
+            body.AddImpulse(new Vector2(0, 1) * jumpForce);
+        }
+        else
+        {
+            print("not grounded");
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        return body.collisions.Count > 0;
     }
 
     internal override void Move(float horizontal)

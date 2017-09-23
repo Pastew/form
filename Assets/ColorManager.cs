@@ -9,13 +9,13 @@ public class ColorManager : MonoBehaviour {
     public Material fillMaterial;
     public Material edgeMaterial;
 
-    public Color startFillColor = Color.white;
-    public Color startEdgeColor = Color.white;
-    public Color startCamBackgroundColor = Color.black;
+    public Color primaryFillColor = Color.white;
+    public Color primaryEdgeColor = Color.white;
+    public Color primaryCamColor = Color.black;
 
-    public Color endFillColor = Color.black;
-    public Color endEdgeColor = Color.black;
-    public Color endCamBackgroundColor = Color.white;
+    public Color secondaryFillColor = Color.black;
+    public Color secondaryEdgeColor = Color.black;
+    public Color secondaryCamColor = Color.white;
 
     private Camera cam;
     private bool direction = false;    
@@ -30,7 +30,7 @@ public class ColorManager : MonoBehaviour {
             SwitchColorsSlowly();
 	}
 
-    private void SwitchColorsSlowly()
+    public void SwitchColorsSlowly()
     {
         StartCoroutine(SwichColorCoroutine());
     }
@@ -41,15 +41,15 @@ public class ColorManager : MonoBehaviour {
         {
             if (direction)
             {
-                fillMaterial.color = Color.Lerp(startFillColor, endFillColor, elapsedTime / transitionLength);
-                edgeMaterial.color = Color.Lerp(startEdgeColor, endEdgeColor, elapsedTime / transitionLength);
-                cam.backgroundColor = Color.Lerp(startCamBackgroundColor, endCamBackgroundColor, elapsedTime / transitionLength);
+                fillMaterial.color = Color.Lerp(primaryFillColor, secondaryFillColor, elapsedTime / transitionLength);
+                edgeMaterial.color = Color.Lerp(primaryEdgeColor, secondaryEdgeColor, elapsedTime / transitionLength);
+                cam.backgroundColor = Color.Lerp(primaryCamColor, secondaryCamColor, elapsedTime / transitionLength);
             }
             else
             {
-                fillMaterial.color = Color.Lerp(endFillColor, startFillColor, elapsedTime / transitionLength);
-                edgeMaterial.color = Color.Lerp(endEdgeColor, startEdgeColor, elapsedTime / transitionLength);
-                cam.backgroundColor = Color.Lerp(endCamBackgroundColor, startCamBackgroundColor, elapsedTime / transitionLength);
+                fillMaterial.color = Color.Lerp(secondaryFillColor, primaryFillColor, elapsedTime / transitionLength);
+                edgeMaterial.color = Color.Lerp(secondaryEdgeColor, primaryEdgeColor, elapsedTime / transitionLength);
+                cam.backgroundColor = Color.Lerp(secondaryCamColor, primaryCamColor, elapsedTime / transitionLength);
             }
 
             yield return new WaitForEndOfFrame();
