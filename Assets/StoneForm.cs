@@ -6,7 +6,7 @@ public class StoneForm : PlayerForm {
 
     private Rigidbody2D body;
 
-    private void Start()
+    private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
     }

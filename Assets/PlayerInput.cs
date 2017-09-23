@@ -44,9 +44,16 @@ public class PlayerInput : MonoBehaviour
         float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
         player.Move(horizontal);
        
+
+        // ===== Debug input ========
         if (Input.GetKeyDown(KeyCode.R))
         {
             FindObjectOfType<Checkpoints>().ResetToLastCheckpoint();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            player.SwitchForm();
         }
     }
 }

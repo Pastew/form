@@ -7,7 +7,7 @@ public class GummyForm : PlayerForm {
 
     private JelloBody body;
 
-    private void Start()
+    private void Awake()
     {
         body = GetComponent<JelloBody>();
     }

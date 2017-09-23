@@ -10,56 +10,80 @@ public class Player : MonoBehaviour {
     private PostProcessingEffects postProcessingManager;
     AudioSource audioSource;
 
-    PlayerForm[] playerForms;
-    private PlayerForm playerForm;
+    List<Transform> playerForms;
+    private PlayerForm currentPlayerForm;
 
     void Start () {
         audioSource = GetComponent<AudioSource>();
         postProcessingManager = FindObjectOfType<PostProcessingEffects>();
 
-        playerForms = GetComponentsInChildren<PlayerForm>();
-        foreach (PlayerForm pf in playerForms)
+        currentPlayerForm = GetComponentInChildren<PlayerForm>();
+
+        playerForms = new List<Transform>();
+        for (int i = 0; i <  transform.childCount; ++i)
         {
-            if (pf.gameObject.activeSelf)
-                playerForm = pf;
+            playerForms.Add(transform.GetChild(i));
         }
 
-        Camera.main.GetComponent<MyCamera>().target = playerForm.transform;
+        Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
     }
+    
 
     internal void JumpEnd()
     {
-        playerForm.JumpEnd();
+        currentPlayerForm.JumpEnd();
     }
 
     internal void Jump()
     {
-        playerForm.Jump();
-        PlayRandomSound(playerForm.jumpClips);
+        currentPlayerForm.Jump();
+        PlayRandomSound(currentPlayerForm.jumpClips);
     }
 
     internal void Move(float horizontal)
     {
-        playerForm.Move(horizontal);
+        currentPlayerForm.Move(horizontal);
     }
 
     internal void Turbo( )
     {
         print("Turbo");
-        playerForm.Turbo();
+        currentPlayerForm.Turbo();
         postProcessingManager.BloomBoom();
     }
 
     internal void Stomp( )
     {
         print("Stomp");
-        playerForm.Stomp();
+        currentPlayerForm.Stomp();
         postProcessingManager.BloomBoom();
     }
 
     internal void TeleportToPosition(Vector3 position)
     {
-        playerForm.TeleportToPosition(position);
+        currentPlayerForm.TeleportToPosition(position);
+    }
+
+    internal void SwitchForm()
+    {
+        Vector3 pos = currentPlayerForm.transform.position;
+
+        currentPlayerForm.gameObject.SetActive(false);
+
+        int currentPlayerFormIndex = playerForms.IndexOf(currentPlayerForm.transform);
+        print(currentPlayerFormIndex);
+        int nextPlayerFormIndex = currentPlayerFormIndex + 1;
+        if (nextPlayerFormIndex >= playerForms.Count)
+            nextPlayerFormIndex = 0;
+
+        print(nextPlayerFormIndex);
+        currentPlayerForm = playerForms[nextPlayerFormIndex].GetComponent<PlayerForm>();
+
+        currentPlayerForm.gameObject.SetActive(true);
+        currentPlayerForm.TeleportToPosition(pos);
+
+
+        Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
     }
 
     internal void Die()
@@ -71,7 +95,7 @@ public class Player : MonoBehaviour {
     IEnumerator DieCoroutine()
     {
         dying = true;
-        PlayRandomSound(playerForm.dieClips);
+        PlayRandomSound(currentPlayerForm.dieClips);
 
         AudioSource musicAudioSource = FindObjectOfType<Music>().GetComponent<AudioSource>();
         //GetComponent<JelloBody>().IsKinematic = true;
@@ -93,7 +117,7 @@ public class Player : MonoBehaviour {
         }
 
         FindObjectOfType<Checkpoints>().ResetToLastCheckpoint();
-        playerForm.FreezePosition(true);
+        currentPlayerForm.FreezePosition(true);
 
         for (float t = 0; t < 3; t += Time.deltaTime)
         {
@@ -107,7 +131,7 @@ public class Player : MonoBehaviour {
         }
         musicAudioSource.pitch = 1;
         cam.followSpeed = camSpeed;
-        playerForm.FreezePosition(false);
+        currentPlayerForm.FreezePosition(false);
         dying = false;
     }
 

@@ -7,7 +7,7 @@ public class BaloonForm : PlayerForm
 {
     private JelloPressureBody body;
 
-    private void Start()
+    private void Awake()
     {
         body = GetComponent<JelloPressureBody>();
 
