@@ -24,7 +24,7 @@ public class Player : MonoBehaviour {
                 playerForm = pf;
         }
 
-        Camera.main.GetComponent<StickyDemoCamera>().target = playerForm.transform;
+        Camera.main.GetComponent<MyCamera>().target = playerForm.transform;
     }
 
     internal void Jump()
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour {
         AudioSource musicAudioSource = FindObjectOfType<Music>().GetComponent<AudioSource>();
         //GetComponent<JelloBody>().IsKinematic = true;
         FindObjectOfType<PostProcessingEffects>().VignetteBoom();
-        StickyDemoCamera cam = Camera.main.GetComponent<StickyDemoCamera>();
+        MyCamera cam = Camera.main.GetComponent<MyCamera>();
         cam.Shake(0.4f);
         float camSpeed = cam.followSpeed;
         cam.followSpeed = 0.03f;

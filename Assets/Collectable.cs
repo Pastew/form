@@ -22,7 +22,7 @@ public class Collectable : MonoBehaviour {
     {
         if (other.GetComponent<JelloBody>())
         {
-            Camera.main.GetComponent<StickyDemoCamera>().Shake();
+            Camera.main.GetComponent<MyCamera>().Shake();
 
             if (boomOnCollect)
                 other.GetComponent<JelloBody>().AddImpulse((other.transform.position - transform.position).normalized * boomForce * transform.localScale.x);

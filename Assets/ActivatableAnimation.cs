@@ -27,7 +27,7 @@ public class ActivatableAnimation : Activatable
 
     public override void Activate()
     {
-        Camera.main.GetComponent<StickyDemoCamera>().Shake(0.1f, 0.003f);
+        Camera.main.GetComponent<MyCamera>().Shake(0.1f, 0.003f);
         if (coroutine != null)
             StopCoroutine(coroutine);
 
@@ -39,7 +39,7 @@ public class ActivatableAnimation : Activatable
 
     public override void Deactivate()
     {
-        Camera.main.GetComponent<StickyDemoCamera>().Shake(0.1f, 0.01f);
+        Camera.main.GetComponent<MyCamera>().Shake(0.1f, 0.01f);
         if (coroutine != null)
             StopCoroutine(coroutine);
 
