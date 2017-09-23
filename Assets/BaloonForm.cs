@@ -5,22 +5,30 @@ using UnityEngine;
 
 public class BaloonForm : PlayerForm
 {
-    private JelloBody body;
+    private JelloPressureBody body;
 
     private void Start()
     {
-        body = GetComponent<JelloBody>();
+        body = GetComponent<JelloPressureBody>();
+
+        // Double gravity for points on bottom of baloon
+        for (int i = 12; i <= 13; ++i)
+            body.AddPersistantForceToPointOnEdge(body.gravity*10, i, 0);
     }
 
     internal override void Jump()
     {
+        body.GasAmount = 1000;
         for (int i = 0; i <= 7; ++i)
             body.AddPersistantForceToPointOnEdge(-body.gravity * jumpForce, i, 0);
     }
 
     internal override void JumpEnd()
     {
-        body.ClearPersistantForces();
+        body.GasAmount = 40;
+
+        for (int i = 0; i <= 7; ++i)
+            body.ClearPersistantForceToPointOnEdge(i);
     }
 
     private bool IsGrounded()
