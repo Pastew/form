@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CameraZoomer : MonoBehaviour {
 
-    public float z = 0;
+    [Tooltip("Set to 0 to reset to default z")]
+    public float zOnTriggerEnter = 0;
+
+    [Tooltip("Set to 0 to reset to default z")]
+    public float zOnTriggerExit = 0;
     
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -12,7 +16,11 @@ public class CameraZoomer : MonoBehaviour {
         if (!collision.CompareTag("Player"))
             return;
 
-        print("ZDAZSDASDASDASD");        
-        Camera.main.GetComponent<MyCamera>().SetTargetZ(z);
+        Camera.main.GetComponent<MyCamera>().SetTargetZ(zOnTriggerEnter);
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Camera.main.GetComponent<MyCamera>().SetTargetZ(zOnTriggerExit);
     }
 }
