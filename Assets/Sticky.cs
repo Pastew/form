@@ -91,32 +91,32 @@ public class Sticky : MonoBehaviour
         body.JelloCollisionEvent += ProcessCollisionEvent;
     }
 
-    void OnGUI()
-    {
-        //Allow for adjusting the break velocity at runtime.
-        GUILayout.Space(20f);
-        GUILayout.Label("Stickyness: " + breakVelocity);
-        GUILayout.BeginHorizontal();
-        if (GUILayout.Button("+"))
-        {
-            breakVelocity++;
-            for (int i = 0; i < joints.Count; i++)
-            {
-                //update all other joints as well.
-                joints[i].breakVelocity = breakVelocity;
-            }
-        }
-        if (GUILayout.Button("-") && breakVelocity > 0f)
-        {
-            breakVelocity--;
-            for (int i = 0; i < joints.Count; i++)
-            {
-                //update all other joints as well
-                joints[i].breakVelocity = breakVelocity;
-            }
-        }
-        GUILayout.EndHorizontal();
-    }
+    //void OnGUI()
+    //{
+    //    //Allow for adjusting the break velocity at runtime.
+    //    GUILayout.Space(20f);
+    //    GUILayout.Label("Stickyness: " + breakVelocity);
+    //    GUILayout.BeginHorizontal();
+    //    if (GUILayout.Button("+"))
+    //    {
+    //        breakVelocity++;
+    //        for (int i = 0; i < joints.Count; i++)
+    //        {
+    //            //update all other joints as well.
+    //            joints[i].breakVelocity = breakVelocity;
+    //        }
+    //    }
+    //    if (GUILayout.Button("-") && breakVelocity > 0f)
+    //    {
+    //        breakVelocity--;
+    //        for (int i = 0; i < joints.Count; i++)
+    //        {
+    //            //update all other joints as well
+    //            joints[i].breakVelocity = breakVelocity;
+    //        }
+    //    }
+    //    GUILayout.EndHorizontal();
+    //}
 
     /// <summary>
     /// Processes the collision event.

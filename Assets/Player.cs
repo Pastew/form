@@ -64,7 +64,7 @@ public class Player : MonoBehaviour {
         currentPlayerForm.TeleportToPosition(position);
     }
 
-    internal void SwitchForm()
+    public void SwitchForm()
     {
         Vector3 pos = currentPlayerForm.transform.position;
 
