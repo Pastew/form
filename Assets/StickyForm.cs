@@ -6,11 +6,14 @@ using UnityEngine;
 public class StickyForm : PlayerForm
 {
 
-    private JelloBody body;
+    private float startingBreakVelocity;
+    private Sticky sticky;
 
     private void Awake()
     {
         body = GetComponent<JelloBody>();
+        sticky = GetComponent<Sticky>();
+        startingBreakVelocity = sticky.breakVelocity;
     }
 
     internal override void Jump()
@@ -19,11 +22,6 @@ public class StickyForm : PlayerForm
         {
             body.AddImpulse(new Vector2(0, 1) * jumpForce);
         }
-    }
-
-    private bool IsGrounded()
-    {
-        return body.collisions.Count > 0;
     }
 
     internal override void Move(float horizontal)
@@ -40,23 +38,8 @@ public class StickyForm : PlayerForm
         }
     }
 
-    internal override void Turbo()
+    internal override void SpecialPower()
     {
-        body.AddImpulse(body.velocity.normalized * turboPower);
-    }
-
-    internal override void Stomp()
-    {
-        body.AddImpulse(Vector2.down * stompPower);
-    }
-
-    internal override void TeleportToPosition(Vector3 position)
-    {
-        body.SetPositionAngleAll(position, 0, true, true);
-    }
-
-    internal override void FreezePosition(bool freeze)
-    {
-        body.IsKinematic = freeze;
+        sticky.breakVelocity = (int)sticky.breakVelocity == 0 ? startingBreakVelocity : 0;
     }
 }

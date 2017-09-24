@@ -33,12 +33,7 @@ public class PlayerInput : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
-            player.Stomp();
-        }
-
-        if (CrossPlatformInputManager.GetButtonDown("Fire2"))
-        {
-            player.Turbo();
+            player.SpecialPower();
         }
 
         float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");

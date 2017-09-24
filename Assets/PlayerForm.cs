@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PlayerForm : MonoBehaviour {
+public abstract class PlayerForm : MonoBehaviour
+{
+
+    protected JelloBody body;
 
     [Range(100, 4000)]
-    [SerializeField] protected int moveForce = 1000;
+    [SerializeField]
+    protected int moveForce = 1000;
 
     [Range(500, 8000)]
-    [SerializeField] protected int rollForce = 1900;
+    [SerializeField]
+    protected int rollForce = 1900;
 
     [Range(0, 100)]
     [SerializeField]
@@ -30,21 +35,31 @@ public abstract class PlayerForm : MonoBehaviour {
     [SerializeField] public AudioClip[] jumpClips;
     [SerializeField] public AudioClip[] dieClips;
 
-    internal abstract void Jump();
     internal abstract void Move(float horizontal);
-    internal abstract void TeleportToPosition(Vector3 position);
+    internal abstract void Jump();
+    internal abstract void SpecialPower();
 
     internal virtual void JumpEnd()
     {
         // It's not abstract because not all forms will need this method
     }
 
-    internal abstract void Turbo();
-    internal abstract void Stomp();
+    internal virtual void TeleportToPosition(Vector3 position)
+    {
+        body.SetPositionAngleAll(position, 0, true, true);
+    }
 
     /// <summary>
     /// This method will freeze/unfreeze player in place
     /// </summary>
     /// <param name="freeze">true -> freeze, false -> unfreeze</param>
-    internal abstract void FreezePosition(bool freeze);
+    internal virtual void FreezePosition(bool freeze)
+    {
+        body.IsKinematic = freeze;
+    }
+
+    protected virtual bool IsGrounded()
+    {
+        return body.collisions.Count > 0;
+    }
 }

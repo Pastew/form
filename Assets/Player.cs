@@ -3,31 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     private bool dying = false;
- 
-    private PostProcessingEffects postProcessingManager;
+
     AudioSource audioSource;
 
     List<Transform> playerForms;
     private PlayerForm currentPlayerForm;
 
-    void Start () {
+    void Start()
+    {
         audioSource = GetComponent<AudioSource>();
-        postProcessingManager = FindObjectOfType<PostProcessingEffects>();
 
         currentPlayerForm = GetComponentInChildren<PlayerForm>();
 
         playerForms = new List<Transform>();
-        for (int i = 0; i <  transform.childCount; ++i)
+        for (int i = 0; i < transform.childCount; ++i)
         {
             playerForms.Add(transform.GetChild(i));
         }
 
         Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
     }
-    
+
 
     internal void JumpEnd()
     {
@@ -45,18 +45,9 @@ public class Player : MonoBehaviour {
         currentPlayerForm.Move(horizontal);
     }
 
-    internal void Turbo( )
+    internal void SpecialPower()
     {
-        print("Turbo");
-        currentPlayerForm.Turbo();
-        postProcessingManager.BloomBoom();
-    }
-
-    internal void Stomp( )
-    {
-        print("Stomp");
-        currentPlayerForm.Stomp();
-        postProcessingManager.BloomBoom();
+        currentPlayerForm.SpecialPower();
     }
 
     internal void TeleportToPosition(Vector3 position)
@@ -71,7 +62,6 @@ public class Player : MonoBehaviour {
         currentPlayerForm.gameObject.SetActive(false);
 
         int currentPlayerFormIndex = playerForms.IndexOf(currentPlayerForm.transform);
-        print(currentPlayerFormIndex);
         int nextPlayerFormIndex = currentPlayerFormIndex + 1;
         if (nextPlayerFormIndex >= playerForms.Count)
             nextPlayerFormIndex = 0;
@@ -124,7 +114,7 @@ public class Player : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
 
-        for (float t = 0.1f; t <= 1 ; t += Time.deltaTime)
+        for (float t = 0.1f; t <= 1; t += Time.deltaTime)
         {
             musicAudioSource.pitch = t;
             yield return new WaitForEndOfFrame();
