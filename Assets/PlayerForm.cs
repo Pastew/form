@@ -8,7 +8,7 @@ public abstract class PlayerForm : MonoBehaviour {
     [Range(100, 4000)]
     [SerializeField] protected int moveForce = 1000;
 
-    [Range(500, 4000)]
+    [Range(500, 8000)]
     [SerializeField] protected int rollForce = 1900;
 
     [Range(0, 100)]
