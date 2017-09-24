@@ -65,11 +65,11 @@
      id="layer1">
     <path
        style="fill:#ffffff;stroke-width:0.27045685"
-       d="m 35.333082,13.96841 -23.54531,16.481477 23.055253,17.71589 C 24.500262,31.738716 56.026194,39.142507 58.135249,30.449887 57.091217,22.34669 23.979039,31.993834 35.333082,13.96841 Z"
+       d="M 36.40216,11.830254 12.85685,28.311731 35.912103,46.027621 C 25.56934,29.60056 57.095272,37.004351 59.204327,28.311731 58.160295,20.208534 25.048117,29.855678 36.40216,11.830254 Z"
        id="rect35"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
-       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\arrow_button.png"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\arrow_button_left.png"
        inkscape:export-xdpi="438.22092"
        inkscape:export-ydpi="438.22092" />
   </g>
