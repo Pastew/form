@@ -19,8 +19,8 @@ MonoBehaviour:
     yOffset: 0
     leftCap:
       serializedVersion: 2
-      x: 0.15820312
-      y: 0.03515625
+      x: 0.09082031
+      y: 0
       width: 0
       height: 0
     innerLeftCap:
@@ -31,8 +31,8 @@ MonoBehaviour:
       height: 0
     rightCap:
       serializedVersion: 2
-      x: 0.84765625
-      y: 0.03515625
+      x: 0.7750391
+      y: 0
       width: 0
       height: 0
     innerRightCap:
@@ -43,10 +43,10 @@ MonoBehaviour:
       height: 0
     body:
     - serializedVersion: 2
-      x: 0.15820312
-      y: 0.03515625
-      width: 0.6894531
-      height: 0.96484375
+      x: 0.09082031
+      y: 0
+      width: 0.68421876
+      height: 0.53125
     capOffset: 0
   - applyTo: 0
     zOffset: 0
