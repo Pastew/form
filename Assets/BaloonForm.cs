@@ -37,16 +37,10 @@ public class BaloonForm : PlayerForm
     internal override void Move(float horizontal)
     {
         if (body.velocity.x < -maxSpeed && horizontal < 0)
-        {
-            print("Too fast going left");
             return;
-        }
 
         if (body.velocity.x > maxSpeed && horizontal > 0)
-        {
-            print("Too fast going right");
             return;
-        }
 
         float force = horizontal * moveForce * Time.deltaTime;
         body.AddForce(new Vector2(force, 0));

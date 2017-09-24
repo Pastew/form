@@ -34,8 +34,5 @@ public class Collectable : MonoBehaviour {
             }
             Destroy(gameObject);
         }
-        else
-            print(other.gameObject.tag);
     }
-
 }

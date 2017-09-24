@@ -20,11 +20,6 @@ public class ActivatableAnimation : Activatable
         deactivatingAudioSource = GetComponents<AudioSource>()[1];
     }
 
-    private  void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T)) Activate();
-    }
-
     public override void Activate()
     {
         Camera.main.GetComponent<MyCamera>().Shake(0.1f, 0.003f);

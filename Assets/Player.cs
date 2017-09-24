@@ -66,7 +66,6 @@ public class Player : MonoBehaviour
         if (nextPlayerFormIndex >= playerForms.Count)
             nextPlayerFormIndex = 0;
 
-        print(nextPlayerFormIndex);
         currentPlayerForm = playerForms[nextPlayerFormIndex].GetComponent<PlayerForm>();
 
         currentPlayerForm.gameObject.SetActive(true);

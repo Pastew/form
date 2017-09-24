@@ -21,6 +21,12 @@ public class CameraZoomer : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!collision.gameObject.activeInHierarchy)
+            return;
+
+        if (!collision.CompareTag("Player"))
+            return;
+
         Camera.main.GetComponent<MyCamera>().SetTargetZ(zOnTriggerExit);
     }
 }
