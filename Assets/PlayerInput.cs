@@ -58,7 +58,7 @@ public class PlayerInput : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            player.SwitchForm();
+            player.SwitchFormNext();
         }
     }
 }

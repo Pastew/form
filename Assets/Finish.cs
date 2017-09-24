@@ -20,8 +20,6 @@ public class Finish : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("COLLISION");
-
         if (other.CompareTag("Player"))
         {
             print("TRIGGERED");

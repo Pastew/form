@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     private bool dying = false;
 
     AudioSource audioSource;
@@ -27,7 +26,6 @@ public class Player : MonoBehaviour
 
         Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
     }
-
 
     internal void JumpEnd()
     {
@@ -55,10 +53,35 @@ public class Player : MonoBehaviour
         currentPlayerForm.TeleportToPosition(position);
     }
 
-    public void SwitchForm()
+    public void SwitchForm(GameObject form)
+    {
+        if (form.name.Equals(currentPlayerForm.name))
+            return;
+
+        Vector3 pos = currentPlayerForm.transform.position;
+
+        currentPlayerForm.FreezePosition(true);
+        currentPlayerForm.gameObject.SetActive(false);
+
+        foreach (Transform pf in playerForms)
+        {
+            if (form.name.Equals(pf.name))
+                currentPlayerForm = pf.GetComponent<PlayerForm>();
+        }
+        currentPlayerForm.gameObject.SetActive(true);
+        currentPlayerForm.TeleportToPosition(pos);
+        currentPlayerForm.FreezePosition(false);
+
+        Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
+
+        // TODO: merge SwichForm functions into one
+    }
+
+    public void SwitchFormNext()
     {
         Vector3 pos = currentPlayerForm.transform.position;
 
+        currentPlayerForm.FreezePosition(true);
         currentPlayerForm.gameObject.SetActive(false);
 
         int currentPlayerFormIndex = playerForms.IndexOf(currentPlayerForm.transform);
@@ -70,9 +93,11 @@ public class Player : MonoBehaviour
 
         currentPlayerForm.gameObject.SetActive(true);
         currentPlayerForm.TeleportToPosition(pos);
-
+        currentPlayerForm.FreezePosition(false);
 
         Camera.main.GetComponent<MyCamera>().target = currentPlayerForm.transform;
+
+        // TODO: merge SwichForm functions into one
     }
 
     internal void Die()
