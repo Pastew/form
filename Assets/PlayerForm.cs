@@ -24,14 +24,6 @@ public abstract class PlayerForm : MonoBehaviour
     [SerializeField]
     protected float maxSpeed = 10000f;
 
-    [Range(50, 500)]
-    [SerializeField]
-    protected float stompPower = 75f;
-
-    [Range(50, 500)]
-    [SerializeField]
-    public float turboPower = 50f;
-
     [SerializeField] public AudioClip[] jumpClips;
     [SerializeField] public AudioClip[] dieClips;
 

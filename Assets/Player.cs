@@ -119,13 +119,13 @@ public class Player : MonoBehaviour
         float camSpeed = cam.followSpeed;
         cam.followSpeed = 0.03f;
 
-        for (float t = 1; t > 0.1f; t -= Time.deltaTime)
+        for (float t = 0.8f; t > 0.1f; t -= Time.deltaTime)
         {
             musicAudioSource.pitch = t;
             yield return new WaitForEndOfFrame();
         }
 
-        for (float t = 1; t > 0; t -= Time.deltaTime)
+        for (float t = 0.8f; t > 0; t -= Time.deltaTime)
         {
             yield return new WaitForEndOfFrame();
         }
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
         FindObjectOfType<Checkpoints>().ResetToLastCheckpoint();
         currentPlayerForm.FreezePosition(true);
 
-        for (float t = 0; t < 3; t += Time.deltaTime)
+        for (float t = 0; t < 0.8; t += Time.deltaTime)
         {
             yield return new WaitForEndOfFrame();
         }

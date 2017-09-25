@@ -2,21 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour {
+public class Explosive : MonoBehaviour {
 
-    public bool boomOnCollect = true;
     public float boomForce = 100f;
     public GameObject explosionPrefab;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public bool dieOnExplosion = true;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,15 +14,22 @@ public class Collectable : MonoBehaviour {
         {
             Camera.main.GetComponent<MyCamera>().Shake();
 
-            if (boomOnCollect)
-                other.GetComponent<JelloBody>().AddImpulse((other.transform.position - transform.position).normalized * boomForce * transform.localScale.x);
+            other.GetComponent<JelloBody>().AddImpulse((other.transform.position - transform.position).normalized * boomForce * transform.localScale.x);
 
             if (explosionPrefab != null)
             {
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 GetComponent<AudioSource>().Play();
             }
-            Destroy(gameObject);
+            else
+            {
+                Debug.LogWarning("Explosive with no explosion prefab set on it");
+            }
+
+            other.GetComponentInParent<Player>().Die();
+
+            if (dieOnExplosion)
+                Destroy(gameObject, 0.1f);
         }
     }
 }

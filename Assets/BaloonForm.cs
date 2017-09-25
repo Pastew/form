@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class BaloonForm : PlayerForm
 {
-    public int GasAmountWhileJumping = 1000;
-    public int GasAmountWhileFloating = 40;
+    [SerializeField] public int GasAmountWhileJumping = 1000;
+    [SerializeField] public int GasAmountWhileFloating = 40;
+
+    [Range(0, 100)]
+    [SerializeField]
+    private float turboPower = 20f;
 
     private void Awake()
     {
@@ -48,7 +52,7 @@ public class BaloonForm : PlayerForm
 
     internal override void SpecialPower()
     {
-        body.AddImpulse(body.velocity.normalized * turboPower);
+        body.AddImpulse(transform.up * turboPower);
     }
 
 }

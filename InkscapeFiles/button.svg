@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="button.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.91329287"
+     inkscape:cx="380.14691"
+     inkscape:cy="1012.5795"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4031"
+       d="m 2.0642737,31.152902 c 0,0 -1.23897496,9.567385 3.0375355,11.048032 12.3061828,4.260739 31.8742098,4.727865 43.6478498,-1.065129 3.971759,-1.954229 2.881765,-9.982903 2.881765,-9.982903 z"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       ry="6.1969957"
+       rx="24.815315"
+       cy="30.755323"
+       cx="26.802132"
+       id="ellipse4033"
+       style="fill:#999999;stroke-width:0.63452148"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       style="fill:#ffffff;stroke-width:0.86309487"
+       d="m 6.5291532,20.896187 c 0,0 -0.993756,9.768521 2.436351,11.280296 9.8705598,4.350313 25.5657108,4.827255 35.0091248,-1.087522 3.18568,-1.995311 2.311414,-10.192774 2.311414,-10.192774 z"
+       id="rect4001"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       style="fill:#e6e6e6;stroke-width:0.57171202"
+       id="path3999"
+       cx="26.370949"
+       cy="20.620615"
+       rx="19.903902"
+       ry="6.2722683"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       d="m 56.84486,31.152902 c 0,0 -1.238975,9.567385 3.037536,11.048032 12.306182,4.260739 31.874209,4.727865 43.647854,-1.065129 3.97175,-1.954229 2.88176,-9.982903 2.88176,-9.982903 z"
+       id="path4122"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#999999;stroke-width:0.63452148"
+       id="ellipse4124"
+       cx="81.582718"
+       cy="30.755323"
+       rx="24.815315"
+       ry="6.1969957" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4126"
+       d="m 61.30974,23.133084 c 0,0 -0.993756,8.270773 2.436351,9.550757 9.870559,3.683306 25.56571,4.087122 35.009124,-0.920779 3.185685,-1.689382 2.311415,-8.629978 2.311415,-8.629978 z"
+       style="fill:#ffffff;stroke-width:0.79417676" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       ry="5.3105798"
+       rx="19.903902"
+       cy="22.899763"
+       cx="81.151535"
+       id="ellipse4128"
+       style="fill:#e6e6e6;stroke-width:0.52606082" />
+    <path
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4130"
+       d="m 109.39272,31.152902 c 0,0 -1.23897,9.567385 3.03754,11.048032 12.30618,4.260739 31.87421,4.727865 43.64785,-1.065129 3.97175,-1.954229 2.88176,-9.982903 2.88176,-9.982903 z"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       ry="6.1969957"
+       rx="24.815315"
+       cy="30.755323"
+       cx="134.13058"
+       id="ellipse4132"
+       style="fill:#999999;stroke-width:0.63452148"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       style="fill:#ffffff;stroke-width:0.69755793"
+       d="m 113.8576,25.955835 c 0,0 -0.99375,6.380758 2.43636,7.368244 9.87055,2.841606 25.56571,3.153143 35.00912,-0.710365 3.18568,-1.303329 2.31141,-6.657879 2.31141,-6.657879 z"
+       id="path4134"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       style="fill:#e6e6e6;stroke-width:0.46206072"
+       id="ellipse4136"
+       cx="133.6994"
+       cy="25.775831"
+       rx="19.903902"
+       ry="4.0970201"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       d="m 2.6687887,58.65232 c 0,0 -1.23897,9.567385 3.03754,11.048032 12.3061803,4.260739 31.8742103,4.727865 43.6478503,-1.065129 3.97175,-1.954229 2.88176,-9.982903 2.88176,-9.982903 z"
+       id="path4138"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#999999;stroke-width:0.63452148"
+       id="ellipse4140"
+       cx="27.406654"
+       cy="58.254742"
+       rx="24.815315"
+       ry="6.1969957" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4142"
+       d="m 7.1336687,55.425853 c 0,0 -0.99375,5.061313 2.43636,5.844602 9.8705503,2.254005 25.5657103,2.501121 35.0091203,-0.563472 3.18568,-1.03382 2.31141,-5.28113 2.31141,-5.28113 z"
+       style="fill:#ffffff;stroke-width:0.62126338" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       ry="3.2498183"
+       rx="19.903902"
+       cy="55.28307"
+       cx="26.975471"
+       id="ellipse4144"
+       style="fill:#e6e6e6;stroke-width:0.4115234" />
+    <path
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4146"
+       d="m 57.763026,58.65232 c 0,0 -1.23897,9.567385 3.03754,11.048032 12.30618,4.260739 31.87421,4.727865 43.647854,-1.065129 3.97175,-1.954229 2.88176,-9.982903 2.88176,-9.982903 z"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       ry="6.1969957"
+       rx="24.815315"
+       cy="58.254742"
+       cx="82.500893"
+       id="ellipse4148"
+       style="fill:#999999;stroke-width:0.63452148"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       style="fill:#ffffff;stroke-width:0.57963103"
+       d="m 62.227906,56.405016 c 0,0 -0.99375,4.4057 2.43636,5.087526 9.87055,1.962035 25.56571,2.177141 35.00912,-0.490483 3.185684,-0.899905 2.311414,-4.597043 2.311414,-4.597043 z"
+       id="path4150"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <ellipse
+       style="fill:#e6e6e6;stroke-width:0.38394621"
+       id="ellipse4152"
+       cx="82.06971"
+       cy="56.280727"
+       rx="19.903902"
+       ry="2.8288558"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-ydpi="174.5047" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#e6e6e6;stroke-width:0.95374346"
+       d="m 57.763026,58.65232 c 0,0 -1.23897,9.567385 3.03754,11.048032 12.30618,4.260739 31.87421,4.727865 43.647854,-1.065129 3.97175,-1.954229 2.88176,-9.982903 2.88176,-9.982903 z"
+       id="path4154"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscc" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       style="fill:#999999;stroke-width:0.63452148"
+       id="ellipse4156"
+       cx="82.500893"
+       cy="58.254742"
+       rx="24.815315"
+       ry="6.1969957" />
+    <path
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       sodipodi:nodetypes="csscc"
+       inkscape:connector-curvature="0"
+       id="path4158"
+       d="m 62.227906,56.405016 c 0,0 -0.99375,4.4057 2.43636,5.087526 9.87055,1.962035 25.56571,2.177141 35.00912,-0.490483 3.185684,-0.899905 2.311414,-4.597043 2.311414,-4.597043 z"
+       style="fill:#ffffff;stroke-width:0.57963103" />
+    <ellipse
+       inkscape:export-ydpi="174.5047"
+       inkscape:export-xdpi="174.5047"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\button.png"
+       ry="2.8288558"
+       rx="19.903902"
+       cy="56.280727"
+       cx="82.06971"
+       id="ellipse4160"
+       style="fill:#e6e6e6;stroke-width:0.38394621" />
+  </g>
+</svg>

@@ -6,6 +6,10 @@ using UnityEngine;
 public class GummyForm : PlayerForm
 {
 
+    [Range(50, 500)]
+    [SerializeField]
+    protected float stompPower = 75f;
+
     private void Awake()
     {
         body = GetComponent<JelloBody>();

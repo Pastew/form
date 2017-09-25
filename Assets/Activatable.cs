@@ -6,6 +6,9 @@ public abstract class Activatable : MonoBehaviour {
 
     public abstract void Activate();
 
-    public abstract void Deactivate();
+    /// <summary>
+    /// Not evey Activatable object have to implement Deactivate function.
+    /// </summary>
+    public virtual void Deactivate() { }
 
 }
