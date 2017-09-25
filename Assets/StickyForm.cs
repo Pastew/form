@@ -40,6 +40,9 @@ public class StickyForm : PlayerForm
 
     internal override void SpecialPower()
     {
-        sticky.breakVelocity = (int)sticky.breakVelocity == 0 ? startingBreakVelocity : 0;
+        //sticky.breakVelocity = (int)sticky.breakVelocity == 0 ? startingBreakVelocity : 0;
+
+        //if ((int)sticky.breakVelocity == 0)
+          //  body.RemoveAllJoints();
     }
 }

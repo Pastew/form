@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="102.44525"
-     inkscape:cy="684.10017"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="462.39238"
+     inkscape:cy="787.05337"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -69,7 +69,109 @@
          d="m 76.918823,93.995418 c -1.348058,-7.154579 7.762495,7.071652 13.096207,12.027132 10.05122,9.33846 4.959007,59.79384 -2.004522,49.31122 -10.715815,-16.13116 1.464348,-25.09767 -4.142677,-31.1369 -8.995979,-9.68941 -3.263052,-10.6389 -6.949008,-30.201452 z"
          id="rect96"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="sssss" />
+         sodipodi:nodetypes="sssss"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="1453.5118"
+         inkscape:export-ydpi="1453.5118" />
+      <rect
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="rect99"
+         width="4.1577382"
+         height="62.555058"
+         x="121.51934"
+         y="69.836304"
+         ry="0.40000001"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="rect103"
+         width="6.2366071"
+         height="3.96875"
+         x="120.56293"
+         y="78.340775"
+         ry="0.60000002"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         ry="0.60000002"
+         y="87.42794"
+         x="120.56293"
+         height="3.96875"
+         width="6.2366071"
+         id="rect105"
+         style="fill:#ffffff;stroke-width:0.26458332"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="rect107"
+         width="6.2366071"
+         height="3.96875"
+         x="120.56293"
+         y="94.911484"
+         ry="0.60000002"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         ry="0.60000002"
+         y="103.0632"
+         x="120.56293"
+         height="3.96875"
+         width="6.2366071"
+         id="rect109"
+         style="fill:#ffffff;stroke-width:0.26458332"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="rect111"
+         width="6.2366071"
+         height="3.96875"
+         x="120.56293"
+         y="111.34856"
+         ry="0.60000002"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         ry="0.60000002"
+         y="120.03481"
+         x="120.56293"
+         height="3.96875"
+         width="6.2366071"
+         id="rect113"
+         style="fill:#ffffff;stroke-width:0.26458332"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="rect115"
+         width="6.2366071"
+         height="3.96875"
+         x="120.56293"
+         y="126.98382"
+         ry="0.60000002"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
+      <rect
+         ry="0.60000002"
+         y="70.857216"
+         x="120.56293"
+         height="3.96875"
+         width="6.2366071"
+         id="rect117"
+         style="fill:#ffffff;stroke-width:0.26458332"
+         inkscape:export-filename="C:\dev\bubble\Assets\Sprites\gate.png"
+         inkscape:export-xdpi="438.52563"
+         inkscape:export-ydpi="438.52563" />
     </g>
   </g>
 </svg>
