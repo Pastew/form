@@ -19,12 +19,16 @@ public class Explosive : MonoBehaviour {
             if (explosionPrefab != null)
             {
                 Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-                GetComponent<AudioSource>().Play();
             }
             else
             {
                 Debug.LogWarning("Explosive with no explosion prefab set on it");
             }
+
+
+            AudioSource audioSource = GetComponent<AudioSource>();
+            if (audioSource)
+                audioSource.Play();
 
             other.GetComponentInParent<Player>().Die();
 

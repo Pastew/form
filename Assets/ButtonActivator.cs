@@ -12,6 +12,8 @@ public class ButtonActivator : MonoBehaviour {
 
     [SerializeField] private String[] tagsThatCanPushThisButton = { "Player" };
 
+    [SerializeField] private AudioClip audioClipOn;
+    [SerializeField] private AudioClip audioClipOff;
 
     private Animator animator;
     private AudioSource audioSource;
@@ -31,6 +33,7 @@ public class ButtonActivator : MonoBehaviour {
         {
             activated = true;
             animator.SetBool("on", true);
+            audioSource.clip = audioClipOn;
             audioSource.Play();
 
             foreach (GameObject go in gameObjectsToActivate)
@@ -47,6 +50,7 @@ public class ButtonActivator : MonoBehaviour {
         {
             activated = false;
             animator.SetBool("on", false);
+            audioSource.clip = audioClipOff;
             audioSource.Play();
 
             foreach (GameObject go in gameObjectsToActivate)
