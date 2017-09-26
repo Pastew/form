@@ -33,7 +33,7 @@ public class Explosive : MonoBehaviour {
             other.GetComponentInParent<Player>().Die();
 
             if (dieOnExplosion)
-                Destroy(gameObject, 0.1f);
+                Destroy(gameObject, 1f);
         }
     }
 }
