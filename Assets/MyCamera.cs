@@ -5,6 +5,8 @@ using System.Collections;
 public class MyCamera : MonoBehaviour {
 
 	public Transform target;
+    public float xShift = 0;
+    public float yShift = 0;
     public bool followSmooth = true;
 
     [Range(0,1)]
@@ -36,6 +38,7 @@ public class MyCamera : MonoBehaviour {
         if (!followSmooth)
         {
             transform.position = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
+            transform.Translate(xShift, yShift, 0);
         }
 
         if (Input.GetKey(KeyCode.G))
@@ -64,7 +67,8 @@ public class MyCamera : MonoBehaviour {
         {
             Vector3 newPosition = target.position;
             newPosition.z = targetZ;
-            transform.position = Vector3.Slerp(transform.position, newPosition, followSpeed );
+            transform.position = Vector3.Slerp(transform.position, newPosition, followSpeed);
+            transform.Translate(xShift, yShift, 0);
         }
     }
 

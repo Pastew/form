@@ -14,7 +14,6 @@ public class PlayerInput : MonoBehaviour
 
     void Start()
     {
-        print("KRUAWRAWR");
         player = FindObjectOfType<Player>();
         initialPhysics2DGravityY = Physics2D.gravity.y;
         startPosition = player.GetPosition();
