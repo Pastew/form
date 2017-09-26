@@ -52,9 +52,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="206.89601"
-     inkscape:cy="957.7909"
+     inkscape:zoom="1.4"
+     inkscape:cx="184.34057"
+     inkscape:cy="648.03839"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -65,7 +65,8 @@
      inkscape:window-height="1028"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -82,6 +83,17 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#808080;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4913"
+       width="75.595238"
+       height="73.516373"
+       x="24.001488"
+       y="81.175591"
+       ry="0.39999971"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:export-xdpi="352"
+       inkscape:export-ydpi="352" />
     <path
        style="fill:#ffffff;stroke-width:0;stroke:#505050;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-linejoin:round;stroke-linecap:butt"
        d="m 97.80614,33.5705 c -24.12927,0.111907 -48.258535,0.223738 -72.387799,0.335691 -2.906808,3.872678 -3.020239,9.435506 -0.424572,13.448973 24.578809,0.172672 49.157615,0.345595 73.736441,0.517268 2.62172,-3.636872 1.97848,-8.534212 1.27372,-12.608222 -0.31677,-0.788061 -1.09443,-1.850102 -2.19779,-1.69371 z"
@@ -90,5 +102,69 @@
        inkscape:export-filename="C:\dev\bubble\Assets\Sprites\beam.png"
        inkscape:export-xdpi="352.63467"
        inkscape:export-ydpi="352.63467" />
+    <path
+       inkscape:export-ydpi="352.63467"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:connector-curvature="0"
+       id="path4889"
+       d="m 97.271601,79.540859 c -24.12927,0.111907 -48.258535,0.223738 -72.387799,0.335691 -2.906808,3.872678 -3.020239,9.435506 -0.424572,13.448973 24.578809,0.172672 49.157615,0.345595 73.736441,0.517268 2.621719,-3.636872 1.978479,-8.534212 1.27372,-12.608222 -0.31677,-0.788061 -1.09443,-1.850102 -2.19779,-1.69371 z"
+       style="fill:#cccccc;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:#e6e6e6;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 96.391602,94.778234 c -24.12927,0.111907 -48.258535,0.223738 -72.387799,0.335691 -2.906808,3.872678 -3.020239,9.435505 -0.424572,13.448975 24.578809,0.17267 49.157615,0.34559 73.736441,0.51726 2.621719,-3.63687 1.978479,-8.53421 1.273719,-12.608216 -0.31677,-0.788061 -1.094429,-1.850102 -2.197789,-1.69371 z"
+       id="path4891"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-ydpi="352.63467" />
+    <path
+       inkscape:export-ydpi="352.63467"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:connector-curvature="0"
+       id="path4893"
+       d="m 97.721527,113.45485 c -24.079952,-1.54599 -48.159894,-3.09207 -72.239843,-4.63802 -3.165987,3.66384 -3.661306,9.20574 -1.34749,13.38804 24.50888,1.86078 49.017739,3.72182 73.526703,5.5816 2.865373,-3.44817 2.560093,-8.37813 2.136872,-12.49093 -0.261883,-0.80796 -0.964745,-1.92091 -2.076242,-1.84069 z"
+       style="fill:#b3b3b3;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:#e6e6e6;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 97.660897,125.89643 c -24.129529,-10e-4 -48.259053,-0.003 -72.388577,-0.004 -2.924957,3.85899 -3.064502,9.42123 -0.487707,13.44684 24.577729,0.28805 49.155453,0.57637 73.733201,0.86342 2.638766,-3.62452 2.018526,-8.52482 1.332897,-12.6021 -0.313067,-0.78954 -1.085731,-1.85521 -2.189814,-1.704 z"
+       id="path4895"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-ydpi="352.63467" />
+    <path
+       inkscape:export-ydpi="352.63467"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:connector-curvature="0"
+       id="path4907"
+       d="m 100.17129,140.17588 c -24.125578,0.43637 -48.251174,0.87174 -72.376752,1.30811 -2.854529,3.91137 -2.89323,9.47523 -0.24389,13.45347 24.578912,-0.15749 49.157824,-0.31471 73.736742,-0.4732 2.57263,-3.67176 1.86367,-8.56001 1.10424,-12.62419 -0.32732,-0.78374 -1.11917,-1.83523 -2.22033,-1.66403 z"
+       style="fill:#b3b3b3;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       inkscape:export-ydpi="352.63467"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:connector-curvature="0"
+       id="path4905"
+       d="M 36.490234,153.35482 C 36.222956,129.22677 35.956678,105.09872 35.6894,80.970675 31.798129,78.088804 26.234681,78.01111 22.237969,80.632503 c -0.01477,24.579417 -0.02981,49.158827 -0.04358,73.738247 3.653634,2.5983 8.546735,1.92362 12.61614,1.1927 0.786011,-0.32183 1.843024,-1.10629 1.679548,-2.20863 z"
+       style="fill:#ffffff;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       style="fill:#ffffff;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 101.12416,153.35482 c -0.26728,-24.12805 -0.53355,-48.2561 -0.80083,-72.384145 -3.891273,-2.881871 -9.454721,-2.959565 -13.451433,-0.338172 -0.01477,24.579417 -0.02981,49.158827 -0.04358,73.738247 3.653634,2.5983 8.546735,1.92362 12.61614,1.1927 0.786013,-0.32183 1.843023,-1.10629 1.679553,-2.20863 z"
+       id="path4909"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-ydpi="352.63467" />
+    <path
+       inkscape:export-ydpi="352.63467"
+       inkscape:export-xdpi="352.63467"
+       inkscape:export-filename="C:\dev\bubble\Assets\Sprites\box.png"
+       inkscape:connector-curvature="0"
+       id="path4911"
+       d="M 41.853633,154.53679 C 59.371628,133.2649 76.890532,111.99374 94.408524,90.721864 93.027039,85.423918 88.076495,81.381365 82.549624,80.816353 64.44554,102.2811 46.341218,123.74564 28.238032,145.21112 c 1.376296,4.8804 6.27721,7.78668 10.478097,10.05535 0.944373,0.28037 2.473172,0.35014 3.137369,-0.72976 z"
+       style="fill:#ffffff;stroke:#505050;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>
