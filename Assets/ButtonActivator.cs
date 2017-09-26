@@ -14,17 +14,24 @@ public class ButtonActivator : MonoBehaviour {
 
 
     private Animator animator;
+    private AudioSource audioSource;
+
+    private bool activated;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        activated = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (TagMatches(collision))
+        if (TagMatches(collision) && !activated)
         {
+            activated = true;
             animator.SetBool("on", true);
+            audioSource.Play();
 
             foreach (GameObject go in gameObjectsToActivate)
                 go.GetComponent<Activatable>().Activate();
@@ -38,7 +45,9 @@ public class ButtonActivator : MonoBehaviour {
 
         if (TagMatches(collision))
         {
+            activated = false;
             animator.SetBool("on", false);
+            audioSource.Play();
 
             foreach (GameObject go in gameObjectsToActivate)
                 go.GetComponent<Activatable>().Deactivate();
