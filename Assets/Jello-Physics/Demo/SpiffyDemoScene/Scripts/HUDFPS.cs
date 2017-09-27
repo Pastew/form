@@ -27,8 +27,14 @@ public class HUDFPS : MonoBehaviour
 	private Color color = Color.white; // The color of the GUI, depending of the FPS ( R < 10, Y < 30, G >= 30 )
 	private string sFPS = ""; // The fps formatted into a string.
 	private GUIStyle style; // The style the text will be displayed at, based en defaultSkin.label.
- 
-	void Start()
+
+
+    void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
+
+    void Start()
 	{
 	    StartCoroutine( FPS() );
 	}
