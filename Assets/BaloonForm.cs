@@ -21,12 +21,14 @@ public class BaloonForm : PlayerForm
             body.AddPersistantForceToPointOnEdge(body.gravity * 10, i, 0);
     }
 
-    internal override void Jump()
+    internal override bool Jump()
     {
         JelloPressureBody pressureBody = (JelloPressureBody)body;
         pressureBody.GasAmount = GasAmountWhileJumping;
         for (int i = 0; i <= 7; ++i)
             body.AddPersistantForceToPointOnEdge(-body.gravity * jumpForce, i, 0);
+
+        return true;
     }
 
     internal override void JumpEnd()

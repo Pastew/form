@@ -34,8 +34,10 @@ public class Player : MonoBehaviour
 
     internal void Jump()
     {
-        currentPlayerForm.Jump();
-        PlayRandomSound(currentPlayerForm.jumpClips);
+        bool jumpedSuccessfully = currentPlayerForm.Jump();
+
+        if (jumpedSuccessfully)
+            PlayRandomSound(currentPlayerForm.jumpClips);
     }
 
     internal void Move(float horizontal)

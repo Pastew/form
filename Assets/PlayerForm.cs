@@ -28,7 +28,12 @@ public abstract class PlayerForm : MonoBehaviour
     [SerializeField] public AudioClip[] dieClips;
 
     internal abstract void Move(float horizontal);
-    internal abstract void Jump();
+
+    /// <summary>
+    /// Returns true if jump attempt was successfull
+    /// </summary>
+    /// <returns></returns>
+    internal abstract bool Jump();
     internal abstract void SpecialPower();
 
     internal virtual void JumpEnd()

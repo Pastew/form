@@ -16,12 +16,15 @@ public class StickyForm : PlayerForm
         startingBreakVelocity = sticky.breakVelocity;
     }
 
-    internal override void Jump()
+    internal override bool Jump()
     {
         if (IsGrounded())
         {
             body.AddImpulse(new Vector2(0, 1) * jumpForce);
+            return true;
         }
+
+        return false;
     }
 
     internal override void Move(float horizontal)
